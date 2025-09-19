@@ -1,0 +1,29 @@
+
+body, h1, h2, h3, h4, p, img, a { margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; font-size: 16px; color: #222; line-height: 1.4; padding: 10px; }
+
+header { border-bottom: 1px solid #ccc; padding: 10px 0; margin-bottom: 12px; }
+header h1 { font-size: 20px; display: inline-block; margin-right: 12px; }
+header nav { display: inline-block; font-size: 14px; }
+
+a { color: #064; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+
+.hero { padding: 12px 0; margin-bottom: 12px; }
+
+.tarjeta { display: inline-block; width: 30%; vertical-align: top; margin-right: 3%; box-sizing: border-box; border: 1px solid #eee; padding: 8px; background: #fff; }
+.tarjeta img { width: 100%; height: auto; display: block; margin-bottom: 8px; }
+.tarjeta h4 { font-size: 16px; margin-bottom: 6px; }
+.tarjeta p { font-size: 14px; }
+
+
+.foto { width: 200px; height: auto; display:block; margin: 8px 0; }
+
+footer { border-top: 1px solid #ccc; margin-top: 16px; padding-top: 8px; font-size: 14px; }
+
+
+@media (max-width: 700px) {
+  .tarjeta { display: block; width: 100%; margin-right: 0; margin-bottom: 12px; }
+  header h1 { display:block; margin-bottom: 6px; }
+}
