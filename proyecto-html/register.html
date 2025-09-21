@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registrar usuario — Data Diamonds</title>
+  <link rel="stylesheet" href="./css/estilos.css">
+  <style>
+    /* Estilos simples para el formulario */
+    .auth { width:min(680px,92%); margin:28px auto; background:#f3f3f3; border:1px solid #ccc; border-radius:8px; padding:18px 18px 24px; }
+    .auth h2 { margin:0 0 12px; background:#e1e1e1; padding:8px 10px; border-radius:6px; font-size:1rem; }
+    .row{display:flex;flex-direction:column;gap:6px;margin:10px 0}
+    .row input,.row select{padding:10px;border:1px solid #bbb;border-radius:6px;background:#fff}
+    .row small{min-height:18px;color:#c62828}
+    .is-invalid{border-color:#c62828!important}
+    .is-valid{border-color:#2e7d32!important}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .center{display:flex;justify-content:center;margin-top:12px}
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand-box">
+        <a href="./index.html" class="brand-link">
+          <img src="./imagenes/logo.png" alt="Logo Data Diamonds" class="brand-logo">
+          <strong>Agencia Data Diamonds</strong>
+        </a>
+      </div>
+      <nav class="nav">
+        <a href="./index.html">Home</a>
+        <a href="./productos.html">Productos</a>
+        <a href="./nosotros.html">Nosotros</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+      <div class="auth-cart">
+        <a href="./login.html" class="active">Iniciar sesión</a>
+        <span class="sep">|</span>
+        <a href="./register.html">Registrar usuario</a>
+        <a class="cart" href="./carrito.html">🛒 Cart (<span id="cartCount">0</span>)</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="auth">
+    <h2>Registro de usuario</h2>
+    <form id="formRegister" novalidate>
+      <div class="row">
+        <label for="nombre">Nombre completo</label>
+        <input id="nombre" type="text" autocomplete="name" required aria-describedby="errNombre">
+        <small id="errNombre"></small>
+      </div>
+
+      <div class="row">
+        <label for="email">Correo</label>
+        <input id="email" type="email" autocomplete="email" required aria-describedby="errEmail">
+        <small id="errEmail"></small>
+      </div>
+
+      <div class="row">
+        <label for="email2">Confirmar correo</label>
+        <input id="email2" type="email" required aria-describedby="errEmail2">
+        <small id="errEmail2"></small>
+      </div>
+
+      <div class="row">
+        <label for="pass">Contraseña</label>
+        <input id="pass" type="password" required minlength="6" aria-describedby="errPass">
+        <small id="errPass"></small>
+      </div>
+
+      <div class="row">
+        <label for="pass2">Confirmar contraseña</label>
+        <input id="pass2" type="password" required minlength="6" aria-describedby="errPass2">
+        <small id="errPass2"></small>
+      </div>
+
+      <div class="row">
+        <label for="tel">Teléfono (opcional)</label>
+        <input id="tel" type="tel" placeholder="+56 9 1234 5678" aria-describedby="errTel">
+        <small id="errTel"></small>
+      </div>
+
+      <div class="grid-2">
+        <div class="row">
+          <label for="region">Región</label>
+          <select id="region" required aria-describedby="errRegion">
+            <option value="">-- Selecciona la región --</option>
+          </select>
+          <small id="errRegion"></small>
+        </div>
+        <div class="row">
+          <label for="comuna">Comuna</label>
+          <select id="comuna" required aria-describedby="errComuna" disabled>
+            <option value="">-- Selecciona la comuna --</option>
+          </select>
+          <small id="errComuna"></small>
+        </div>
+      </div>
+
+      <div class="center">
+        <button class="btn" type="submit">REGISTRAR</button>
+      </div>
+    </form>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Agencia TI Data Diamonds</strong></div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/cart.js"></script>
+  <script src="./js/register.js"></script>
+  <script>updateCartCount(); initRegisterValidation();</script>
+</body>
+</html>
