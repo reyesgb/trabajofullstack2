@@ -1,55 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pablo Reyes - Perfil</title>
-  <link rel="stylesheet" href="css/estilos.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pablo Reyes — Perfil | Data Diamonds</title>
+  <link rel="stylesheet" href="./css/estilos.css">
+  <style>
+    /* Ajustes locales para este perfil */
+    .profile-wrap { width:min(1100px,92%); margin:28px auto; }
+    .head-row {
+      display:grid; grid-template-columns:140px 1fr; gap:18px; align-items:center;
+      margin-bottom:10px;
+    }
+    .avatar {
+      width:140px; height:140px; object-fit:cover; border-radius:14px; border:1px solid #e6e6e6;
+    }
+    .profile-wrap h1 { font-size: clamp(2rem, 4vw, 3rem); margin:0; }
+    .section { margin-top:26px; }
+    .section h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); margin:0 0 12px; }
+    .lead { font-size:1.25rem; line-height:1.6; color:#333; max-width:100ch; }
+    .bullets { margin:10px 0 0 22px; }
+    .back { margin-top:26px; }
+  </style>
 </head>
 <body>
+
+  <!-- HEADER -->
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html">Pacrima</a>
-      <nav>
-        <ul class="menu">
-          <li><a href="index.html" class="nav-link">Inicio</a></li>
-        </ul>
+    <div class="container header-row">
+      <div class="brand-box">
+        <a href="./index.html" class="brand-link">
+          <img src="./imagenes/logo.png" alt="Logo Data Diamonds" class="brand-logo">
+          <strong>Agencia Data Diamonds</strong>
+        </a>
+      </div>
+      <nav class="nav">
+        <a href="./index.html">Home</a>
+        <a href="./productos.html">Productos</a>
+        <a href="./nosotros.html" class="active">Nosotros</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./contacto.html">Contacto</a>
       </nav>
+      <div class="auth-cart">
+        <a href="./login.html">Iniciar sesión</a>
+        <span class="sep">|</span>
+        <a href="./register.html">Registrar usuario</a>
+        <a class="cart" href="./carrito.html">🛒 Cart (<span id="cartCount">0</span>)</a>
+      </div>
     </div>
   </header>
 
-  <main class="container detalle">
-    <h1>Pablo Reyes</h1>
-    <div class="box">
-      <h2>Resumen Profesional</h2>
-      <p>Desarrollador Web Fullstack con amplia experiencia en el diseño y construcción de aplicaciones digitales modernas, escalables y seguras.</p>
+  <!-- MAIN -->
+  <main class="profile-wrap">
+    <!-- Encabezado con imagen + nombre -->
+    <div class="head-row">
+      <img class="avatar" src="./imagenes/fotos-equipo/pablo.jpg" alt="Pablo Reyes — Foto de perfil">
+      <h1>Pablo Reyes</h1>
     </div>
 
-    <div class="box">
+    <!-- Resumen -->
+    <section class="section">
+      <h2>Resumen Profesional</h2>
+      <p class="lead">
+        Desarrollador Web Full-Stack con amplia experiencia en el diseño y construcción de
+        aplicaciones digitales modernas, escalables y seguras.
+      </p>
+    </section>
+
+    <!-- Estudios -->
+    <section class="section">
       <h2>Estudios</h2>
-      <ul>
+      <ul class="bullets">
         <li>Ingeniería en Informática — DUOC UC</li>
-        <li>Certificación Fullstack JavaScript</li>
+        <li>Certificación Full-Stack JavaScript</li>
         <li>Especialización en Node.js y React</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="box">
+    <!-- Servicios -->
+    <section class="section">
       <h2>Servicios</h2>
-      <ul>
+      <ul class="bullets">
         <li>Desarrollo de sitios corporativos responsivos</li>
         <li>Aplicaciones web SPA</li>
-        <li>Integración con bases de datos</li>
+        <li>Integración con bases de datos y APIs</li>
       </ul>
-    </div>
+    </section>
 
-    <a href="index.html" class="btn outline">← Volver</a>
+    <div class="back">
+      <a class="btn" href="./nosotros.html">⬅ Volver</a>
+    </div>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Pacrima</p>
+    <div class="container footer-grid">
+      <div><strong>Agencia TI Data Diamonds</strong></div>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="./js/cart.js"></script>
+  <script>updateCartCount();</script>
 </body>
 </html>
