@@ -1,85 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pacrima - Servicios Profesionales</title>
-  <link rel="stylesheet" href="css/estilos.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agencia Data Diamonds</title>
+  <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
 
-    <!--Cabezera-->
-    <header>
-    <div class="container header-inner">
-    <a class="logo" href="index.html">Pacrima</a>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="productos.html">Servicios</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
-        <div class="carrito">
-        <a href="#"><span>🛒</span>Carrito (0)</a>
-        </div>
-    </div>
-    </header>
-    
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand-box">
+        <a href="./index.html" class="brand-link">
+          <img src="./imagenes/logo.png" alt="Logo Data Diamonds" class="brand-logo">
+          <strong>Agencia Data Diamonds</strong>
+        </a>
+      </div>
 
-    <!--Bienvenida papus-->
-  <main class="container">
+      <nav class="nav">
+        <a class="active" href="./index.html">Home</a>
+        <a href="./productos.html">Productos</a>
+        <a href="./nosotros.html">Nosotros</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+
+      <div class="auth-cart">
+        <a href="./login.html">Iniciar sesión</a>
+        <span class="sep">|</span>
+        <a href="./register.html">Registrar usuario</a>
+        <a class="cart" href="./carrito.html">🛒 Cart (<span id="cartCount">0</span>)</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- HERO -->
     <section class="hero">
-      <h1>Tienda de Servicios Pacrima</h1>
-      <p>Tienda dedicada a la venta de servicios, con diferentes conocimientos en el área de la programación. 
-        Contamos con un gran equipo con variedad de experiencia y especialización en el área. 
-        Ofrecemos diferentes tipos de servicios dependiendo de la necesidad del cliente.</p>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>TIENDA ONLINE</h1>
+          <p class="lead">
+            Ofrecemos servicios de desarrollo, seguridad, diseño y marketing digital para potenciar tu negocio.
+          </p>
+          <a class="btn" href="./productos.html">⬇ ver productos</a>
+        </div>
+        <div class="hero-img">
+          <img src="./imagenes/diamonds.png" alt="Imagen de presentación" style="width:100%;border-radius:6px;">
+        </div>
+      </div>
     </section>
 
+    <!-- LISTADO DE 6 SERVICIOS -->
+    <section class="listado">
+      <div class="container">
+        <h2>Servicios destacados</h2>
+        <div class="cards">
 
-    <!--los socios disponibles-->
-    <section class="socios">
-        <h2>Socios Disponibles</h2>
-        <div class="personas-grid">
+          <!-- 1 -->
+          <article class="card">
+            <img class="card-img" src="./imagenes/dev.jpg" alt="Desarrollo Web Full-Stack">
+            <a class="card-title" href="./detalle.html">Desarrollo Web Full-Stack</a>
+            <div class="card-attrs">Sitios y apps a medida</div>
+            <div class="card-price">desde $500.000</div>
+            <button class="btn" type="button" onclick="addToCart('svc-dev')">Agregar al carrito</button>
+          </article>
 
-        
-      <article class="card">
-        <img src="" alt="Pablo Reyes">
-        <div class="card-body">
-          <h3>Pablo Reyes</h3>
-          <p class="rol">Desarrollador Web Fullstack</p>
-          <p>Diseño y desarrollo de aplicaciones web modernas y responsivas.</p>
-          <a href="nosotros.html#pablo" class="btn primary">Ver perfil</a>
-        </div>
-      </article>
+          <!-- 2 -->
+          <article class="card">
+            <img class="card-img" src="./imagenes/seguridad.jpg" alt="Auditoría de Ciberseguridad">
+            <a class="card-title" href="./detalle.html">Auditoría de Ciberseguridad</a>
+            <div class="card-attrs">Vulnerabilidades y recomendaciones</div>
+            <div class="card-price">desde $350.000</div>
+            <button class="btn" type="button" onclick="addToCart('svc-sec')">Agregar al carrito</button>
+          </article>
 
-  
-      <article class="card">
-        <img src="" alt="Cristian Padilla">
-        <div class="card-body">
-          <h3>Cristian Padilla</h3>
-          <p class="rol">Diseñador UX/UI</p>
-          <a href="persona2.html#cristian" class="btn primary">Ver perfil</a>
-        </div>
-      </article>
+          <!-- 3 -->
+          <article class="card">
+            <img class="card-img" src="./imagenes/datos.jpg" alt="Consultoría en Protección de Datos">
+            <a class="card-title" href="./detalle.html">Consultoría en Protección de Datos</a>
+            <div class="card-attrs">Cumplimiento y buenas prácticas</div>
+            <div class="card-price">desde $250.000</div>
+            <button class="btn" type="button" onclick="addToCart('svc-datos')">Agregar al carrito</button>
+          </article>
 
-      <article class="card">
-        <img src="" alt="Matias Vargas">
-        <div class="card-body">
-          <h3>Matías Vargas</h3>
-          <p class="rol">Consultor en Ciberseguridad</p>
-          <a href="persona3.html" class="btn primary">Ver perfil</a>
+          <!-- 4 -->
+          <article class="card">
+            <img class="card-img" src="./imagenes/ux.jpg" alt="Diseño UX/UI">
+            <a class="card-title" href="./detalle.html">Diseño UX/UI</a>
+            <div class="card-attrs">Interfaces centradas en el usuario</div>
+            <div class="card-price">desde $300.000</div>
+            <button class="btn" type="button" onclick="addToCart('svc-ux')">Agregar al carrito</button>
+          </article>
+
+          <!-- 5 -->
+          <article class="card">
+            <img class="card-img" src="./imagenes/marketing.jpg" alt="Marketing Digital & SEO">
+            <a class="card-title" href="./detalle.html">Marketing Digital & SEO</a>
+            <div class="card-attrs">Campañas y posicionamiento</div>
+            <div class="card-price">desde $200.000</div>
+            <button class="btn" type="button" onclick="addToCart('svc-mkt')">Agregar al carrito</button>
+          </article>
+
+          <!-- 6 -->
+          <article class="card">
+            <img class="card-img" src="./imagenes/soporte.jpg" alt="Mantenimiento y Soporte">
+            <a class="card-title" href="./detalle.html">Mantenimiento y Soporte</a>
+            <div class="card-attrs">Actualizaciones y backups</div>
+            <div class="card-price">desde $150.000</div>
+            <button class="btn" type="button" onclick="addToCart('svc-sop')">Agregar al carrito</button>
+          </article>
+
         </div>
-        </div>
-      </article>
+      </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Pacrima - Servicios Profesionales</p>
+    <div class="container footer-grid">
+      <div>
+        <strong>Agencia TI Data Diamonds</strong>
+        <div class="pays">
+          <span class="pay"></span><span class="pay"></span><span class="pay"></span>
+        </div>
+      </div>
+      <nav class="foot-nav">
+        <a href="#">Terminos y Condiciones</a>
+        <a href="#">Por Agregar</a>
+        <a href="#">Por Agregar</a>
+      </nav>
+      <form class="nl" onsubmit="return false;">
+        <label for="nlEmail">Suscríbete! te enviaremos las próximas novedades.</label>
+        <div class="nl-row">
+          <input id="nlEmail" type="email" placeholder="Enter Email">
+          <button class="btn" type="submit">Subscribe</button>
+        </div>
+      </form>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="./js/cart.js"></script>
+  <script>updateCartCount();</script>
 </body>
 </html>
