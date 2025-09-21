@@ -1,54 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matías Vargas - Perfil</title>
-  <link rel="stylesheet" href="css/estilos.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matías Vargas — Perfil | Data Diamonds</title>
+  <link rel="stylesheet" href="./css/estilos.css">
+  <style>
+    .profile-wrap { width:min(1100px,92%); margin:28px auto; }
+    .head-row {
+      display:grid; grid-template-columns:140px 1fr; gap:18px; align-items:center;
+      margin-bottom:10px;
+    }
+    .avatar {
+      width:140px; height:140px; object-fit:cover; border-radius:14px; border:1px solid #e6e6e6;
+    }
+    .profile-wrap h1 { font-size: clamp(2rem, 4vw, 3rem); margin:0; }
+    .section { margin-top:26px; }
+    .section h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); margin:0 0 12px; }
+    .lead { font-size:1.25rem; line-height:1.6; color:#333; max-width:100ch; }
+    .bullets { margin:10px 0 0 22px; }
+    .back { margin-top:26px; }
+  </style>
 </head>
 <body>
+
+  <!-- HEADER -->
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html">Pacrima</a>
-      <nav>
-        <ul class="menu">
-          <li><a href="index.html" class="nav-link">Inicio</a></li>
-        </ul>
+    <div class="container header-row">
+      <div class="brand-box">
+        <a href="./index.html" class="brand-link">
+          <img src="./imagenes/logo.png" alt="Logo Data Diamonds" class="brand-logo">
+          <strong>Agencia Data Diamonds</strong>
+        </a>
+      </div>
+      <nav class="nav">
+        <a href="./index.html">Home</a>
+        <a href="./productos.html">Productos</a>
+        <a href="./nosotros.html" class="active">Nosotros</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./contacto.html">Contacto</a>
       </nav>
+      <div class="auth-cart">
+        <a href="./login.html">Iniciar sesión</a>
+        <span class="sep">|</span>
+        <a href="./register.html">Registrar usuario</a>
+        <a class="cart" href="./carrito.html">🛒 Cart (<span id="cartCount">0</span>)</a>
+      </div>
     </div>
   </header>
 
-  <main class="container detalle">
-    <h1>Matías Vargas</h1>
-    <div class="box">
-      <h2>Resumen Profesional</h2>
-      <p>Consultor en Ciberseguridad con experiencia en auditorías, gestión de riesgos y cumplimiento de normativas internacionales.</p>
+  <!-- MAIN -->
+  <main class="profile-wrap">
+    <div class="head-row">
+      <img class="avatar" src="./imagenes/fotos-equipo/matias.jpg" alt="Matías Vargas — Foto de perfil">
+      <h1>Matías Vargas</h1>
     </div>
 
-    <div class="box">
+    <section class="section">
+      <h2>Resumen Profesional</h2>
+      <p class="lead">
+        Consultor en Ciberseguridad con experiencia en auditorías, gestión de riesgos
+        y cumplimiento de normativas internacionales.
+      </p>
+    </section>
+
+    <section class="section">
       <h2>Estudios</h2>
-      <ul>
+      <ul class="bullets">
         <li>Ingeniería en Seguridad Informática</li>
         <li>Certificación en Ethical Hacking</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="box">
+    <section class="section">
       <h2>Servicios</h2>
-      <ul>
+      <ul class="bullets">
         <li>Auditorías de seguridad</li>
         <li>Pentesting y pruebas de vulnerabilidad</li>
         <li>Asesoría en normativas de protección de datos</li>
       </ul>
-    </div>
+    </section>
 
-    <a href="index.html" class="btn outline">← Volver</a>
+    <div class="back">
+      <a class="btn" href="./nosotros.html">⬅ Volver</a>
+    </div>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Pacrima</p>
+    <div class="container footer-grid">
+      <div><strong>Agencia TI Data Diamonds</strong></div>
     </div>
   </footer>
+
+  <script src="./js/cart.js"></script>
+  <script>updateCartCount();</script>
 </body>
 </html>
