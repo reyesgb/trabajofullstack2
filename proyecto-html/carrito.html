@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Diamonds — Carrito</title>
+  <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand-box">
+        <a href="./index.html" class="brand-link">
+          <img src="./imagenes/logo.png" alt="Logo Data Diamonds" class="brand-logo">
+          <strong>Agencia Data Diamonds</strong>
+        </a>
+      </div>
+      <nav class="nav">
+        <a href="./index.html">Home</a>
+        <a href="./productos.html">Productos</a>
+        <a href="./nosotros.html">Nosotros</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+      <div class="auth-cart">
+        <a href="./login.html">Iniciar sesión</a>
+        <span class="sep">|</span>
+        <a href="./register.html">Registrar usuario</a>
+        <a class="cart" href="./carrito.html">🛒 Cart (<span id="cartCount">0</span>)</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="margin:22px auto;">
+    <h1>Tu carrito</h1>
+    <ul id="cartList" style="list-style: none; padding: 0; display: grid; gap: 10px;"></ul>
+
+    <div style="margin-top: 14px; display:flex; align-items:center; justify-content:space-between;">
+      <div>Total: <strong id="cartTotal">$0</strong></div>
+      <div>
+        <button class="btn" onclick="clearCart()">Vaciar carrito</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Data Diamonds</strong></div>
+      <nav class="foot-nav"><a href="#">Category X</a><a href="#">Category Y</a><a href="#">Category Z</a></nav>
+      <form class="nl" onsubmit="return false;">
+        <label for="nlEmail">Únete a nuestro newsletter</label>
+        <div class="nl-row"><input id="nlEmail" type="email" placeholder="Email"><button class="btn">Suscribirse</button></div>
+      </form>
+    </div>
+  </footer>
+
+  <script src="./js/cart.js"></script>
+  <script>
+    renderCart();
+    updateCartCount();
+  </script>
+</body>
+</html>
