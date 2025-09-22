@@ -1,24 +1,32 @@
-<main class="container detalle-producto">
-  <h1>Soporte Técnico</h1>
-  <div class="detalle-grid">
-    <div class="detalle-img"><img src="img/servicios/soporte.jpg" alt="Soporte Técnico"></div>
-    <div class="detalle-info">
-      <h2>Descripción</h2>
-      <p>Asistencia personalizada, mantenimiento y resolución de incidencias técnicas.</p>
-      <h2>Incluye</h2>
-      <ul>
-        <li>Soporte remoto y presencial.</li>
-        <li>Mantenimiento preventivo y correctivo.</li>
-        <li>Resolución de incidencias críticas.</li>
-      </ul>
-      <h2>Precio</h2>
-      <p class="precio">$120.000 CLP</p>
-      <div class="acciones">
-        <label for="cantidad">Cantidad:</label>
-        <input type="number" id="cantidad" value="1" min="1">
-        <button class="btn primary" id="add-to-cart">Agregar al carrito</button>
-      </div>
-    </div>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mantenimiento y Soporte — Data Diamonds</title>
+  <link rel="stylesheet" href="./css/estilos.css">
+  <style>.detalle{width:min(900px,92%);margin:36px auto}.detalle h1{font-size:clamp(2rem,4vw,3rem)}.detalle img{width:100%;border-radius:10px;margin:14px 0}.detalle p{line-height:1.7;color:#333}</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-row">
+    <div class="brand-box"><a href="./index.html" class="brand-link"><img src="./imagenes/logo.png" class="brand-logo" alt=""><strong>Agencia Data Diamonds</strong></a></div>
+    <nav class="nav">
+      <a href="./index.html">Home</a><a class="active" href="./productos.html">Productos</a>
+      <a href="./nosotros.html">Nosotros</a><a href="./blog.html">Blog</a><a href="./contacto.html">Contacto</a>
+    </nav>
+    <div class="auth-cart"><a class="cart" href="./carrito.html">🛒 Cart (<span id="cartCount">0</span>)</a></div>
   </div>
-  <a href="productos.html" class="btn outline">← Volver a Servicios</a>
+</header>
+
+<main class="detalle">
+  <h1>Mantenimiento y Soporte</h1>
+  <img src="./imagenes/soporte.jpg" alt="Mantenimiento y Soporte">
+  <p>Plan de continuidad: actualizaciones, backups, monitoreo y resolución de incidencias. SLA según necesidad del negocio.</p>
+  <p>Incluye mejoras evolutivas y asesoría técnica permanente.</p>
+  <a class="btn" href="./productos.html">⬅ Volver a Productos</a>
 </main>
+
+<footer class="site-footer"><div class="container footer-grid"><div><strong>Agencia TI Data Diamonds</strong></div></div></footer>
+<script src="./js/cart.js"></script><script>updateCartCount();</script>
+</body></html>
