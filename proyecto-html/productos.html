@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Agencia Data Diamonds — Productos</title>
+  <title>Productos — Agencia Data Diamonds</title>
   <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
@@ -17,6 +17,7 @@
           <strong>Agencia Data Diamonds</strong>
         </a>
       </div>
+
       <nav class="nav">
         <a href="./index.html">Home</a>
         <a class="active" href="./productos.html">Productos</a>
@@ -24,6 +25,7 @@
         <a href="./blog.html">Blog</a>
         <a href="./contacto.html">Contacto</a>
       </nav>
+
       <div class="auth-cart">
         <a href="./login.html">Iniciar sesión</a>
         <span class="sep">|</span>
@@ -34,94 +36,82 @@
   </header>
 
   <!-- MAIN -->
-  <main class="listado">
-    <div class="container">
-      <h1>Servicios de la Agencia TI Data Diamonds</h1>
-      <div class="cards">
+  <main>
+    <section class="container" style="padding:22px 0 0;">
+      <h1>Productos / Servicios</h1>
+      <p class="lead">Explora nuestro catálogo de servicios profesionales.</p>
+    </section>
 
-        <!-- 1 -->
-        <article class="card">
-          <img class="card-img" src="./imagenes/dev.jpg" alt="Desarrollo Web Full-Stack">
-          <a class="card-title" href="./detalle.html">Desarrollo Web Full-Stack</a>
-          <div class="card-attrs">Sitios y apps a medida</div>
-          <div class="card-price">desde $500.000</div>
-          <button class="btn" type="button" onclick="addToCart('svc-dev')">Agregar al carrito</button>
-        </article>
+    <section class="listado">
+      <div class="container">
+        <div class="cards">
 
-        <!-- 2 -->
-        <article class="card">
-          <img class="card-img" src="./imagenes/seguridad.jpg" alt="Auditoría de Ciberseguridad">
-          <a class="card-title" href="./detalle.html">Auditoría de Ciberseguridad</a>
-          <div class="card-attrs">Vulnerabilidades y recomendaciones</div>
-          <div class="card-price">desde $350.000</div>
-          <button class="btn" type="button" onclick="addToCart('svc-sec')">Agregar al carrito</button>
-        </article>
+          <!-- 1 Desarrollo -->
+          <article class="card">
+            <img class="card-img" src="./imagenes/dev.jpg" alt="Desarrollo Web Full-Stack">
+            <a class="card-title" href="./detalle-desarrollo.html">Desarrollo Web Full-Stack</a>
+            <div class="card-attrs">Sitios y apps a medida</div>
+            <div class="card-price">desde $500.000</div>
+            <button class="btn" type="button" onclick="addToCart('svc-dev')">Agregar al carrito</button>
+          </article>
 
-        <!-- 3 -->
-        <article class="card">
-          <img class="card-img" src="./imagenes/datos.jpg" alt="Consultoría en Protección de Datos">
-          <a class="card-title" href="./detalle.html">Consultoría en Protección de Datos</a>
-          <div class="card-attrs">Cumplimiento y buenas prácticas</div>
-          <div class="card-price">desde $250.000</div>
-          <button class="btn" type="button" onclick="addToCart('svc-datos')">Agregar al carrito</button>
-        </article>
+          <!-- 2 Seguridad -->
+          <article class="card">
+            <img class="card-img" src="./imagenes/seguridad.jpg" alt="Auditoría de Ciberseguridad">
+            <a class="card-title" href="./detalle-seguridad.html">Auditoría de Ciberseguridad</a>
+            <div class="card-attrs">Vulnerabilidades y recomendaciones</div>
+            <div class="card-price">desde $350.000</div>
+            <button class="btn" type="button" onclick="addToCart('svc-sec')">Agregar al carrito</button>
+          </article>
 
-        <!-- 4 -->
-        <article class="card">
-          <img class="card-img" src="./imagenes/ux.jpg" alt="Diseño UX/UI">
-          <a class="card-title" href="./detalle.html">Diseño UX/UI</a>
-          <div class="card-attrs">Interfaces centradas en el usuario</div>
-          <div class="card-price">desde $300.000</div>
-          <button class="btn" type="button" onclick="addToCart('svc-ux')">Agregar al carrito</button>
-        </article>
+          <!-- 3 Datos -->
+          <article class="card">
+            <img class="card-img" src="./imagenes/datos.jpg" alt="Consultoría en Protección de Datos">
+            <a class="card-title" href="./detalle-datos.html">Consultoría en Protección de Datos</a>
+            <div class="card-attrs">Cumplimiento y buenas prácticas</div>
+            <div class="card-price">desde $250.000</div>
+            <button class="btn" type="button" onclick="addToCart('svc-datos')">Agregar al carrito</button>
+          </article>
 
-        <!-- 5 -->
-        <article class="card">
-          <img class="card-img" src="./imagenes/marketing.jpg" alt="Marketing Digital & SEO">
-          <a class="card-title" href="./detalle.html">Marketing Digital & SEO</a>
-          <div class="card-attrs">Campañas y posicionamiento</div>
-          <div class="card-price">desde $200.000</div>
-          <button class="btn" type="button" onclick="addToCart('svc-mkt')">Agregar al carrito</button>
-        </article>
+          <!-- 4 UX/UI -->
+          <article class="card">
+            <img class="card-img" src="./imagenes/ux.jpg" alt="Diseño UX/UI">
+            <a class="card-title" href="./detalle-ux.html">Diseño UX/UI</a>
+            <div class="card-attrs">Interfaces centradas en el usuario</div>
+            <div class="card-price">desde $300.000</div>
+            <button class="btn" type="button" onclick="addToCart('svc-ux')">Agregar al carrito</button>
+          </article>
 
-        <!-- 6 -->
-        <article class="card">
-          <img class="card-img" src="./imagenes/soporte.jpg" alt="Mantenimiento y Soporte">
-          <a class="card-title" href="./detalle.html">Mantenimiento y Soporte</a>
-          <div class="card-attrs">Actualizaciones y backups</div>
-          <div class="card-price">desde $150.000</div>
-          <button class="btn" type="button" onclick="addToCart('svc-sop')">Agregar al carrito</button>
-        </article>
+          <!-- 5 Marketing -->
+          <article class="card">
+            <img class="card-img" src="./imagenes/marketing.jpg" alt="Marketing Digital & SEO">
+            <a class="card-title" href="./detalle-marketing.html">Marketing Digital & SEO</a>
+            <div class="card-attrs">Campañas y posicionamiento</div>
+            <div class="card-price">desde $200.000</div>
+            <button class="btn" type="button" onclick="addToCart('svc-mkt')">Agregar al carrito</button>
+          </article>
 
+          <!-- 6 Soporte -->
+          <article class="card">
+            <img class="card-img" src="./imagenes/soporte.jpg" alt="Mantenimiento y Soporte">
+            <a class="card-title" href="./detalle-soporte.html">Mantenimiento y Soporte</a>
+            <div class="card-attrs">Actualizaciones y backups</div>
+            <div class="card-price">desde $150.000</div>
+            <button class="btn" type="button" onclick="addToCart('svc-sop')">Agregar al carrito</button>
+          </article>
+
+        </div>
       </div>
-    </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div>
-        <strong>Agencia TI Data Diamonds</strong>
-        <div class="pays">
-          <span class="pay"></span><span class="pay"></span><span class="pay"></span>
-        </div>
-      </div>
-      <nav class="foot-nav">
-        <a href="#">Terminos y Condiciones</a>
-        <a href="#">Por Agregar</a>
-        <a href="#">Por Agregar</a>
-      </nav>
-      <form class="nl" onsubmit="return false;">
-        <label for="nlEmail">Suscríbete! te enviaremos las próximas novedades.</label>
-        <div class="nl-row">
-          <input id="nlEmail" type="email" placeholder="Enter Email">
-          <button class="btn" type="submit">Subscribe</button>
-        </div>
-      </form>
+      <div><strong>Agencia TI Data Diamonds</strong></div>
     </div>
   </footer>
 
-  <!-- Scripts del carrito -->
   <script src="./js/cart.js"></script>
   <script>updateCartCount();</script>
 </body>
