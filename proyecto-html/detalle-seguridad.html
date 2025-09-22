@@ -1,24 +1,32 @@
-<main class="container detalle-producto">
-  <h1>Ciberseguridad</h1>
-  <div class="detalle-grid">
-    <div class="detalle-img"><img src="img/servicios/ciberseguridad.jpg" alt="Ciberseguridad"></div>
-    <div class="detalle-info">
-      <h2>Descripción</h2>
-      <p>Consultoría en seguridad digital: auditorías, protección de datos y cumplimiento normativo.</p>
-      <h2>Incluye</h2>
-      <ul>
-        <li>Auditoría de seguridad.</li>
-        <li>Configuración de firewalls y antivirus.</li>
-        <li>Recomendaciones de buenas prácticas.</li>
-      </ul>
-      <h2>Precio</h2>
-      <p class="precio">$300.000 CLP</p>
-      <div class="acciones">
-        <label for="cantidad">Cantidad:</label>
-        <input type="number" id="cantidad" value="1" min="1">
-        <button class="btn primary" id="add-to-cart">Agregar al carrito</button>
-      </div>
-    </div>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auditoría de Ciberseguridad — Data Diamonds</title>
+  <link rel="stylesheet" href="./css/estilos.css">
+  <style>.detalle{width:min(900px,92%);margin:36px auto}.detalle h1{font-size:clamp(2rem,4vw,3rem)}.detalle img{width:100%;border-radius:10px;margin:14px 0}.detalle p{line-height:1.7;color:#333}</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-row">
+    <div class="brand-box"><a href="./index.html" class="brand-link"><img src="./imagenes/logo.png" class="brand-logo" alt=""><strong>Agencia Data Diamonds</strong></a></div>
+    <nav class="nav">
+      <a href="./index.html">Home</a><a class="active" href="./productos.html">Productos</a>
+      <a href="./nosotros.html">Nosotros</a><a href="./blog.html">Blog</a><a href="./contacto.html">Contacto</a>
+    </nav>
+    <div class="auth-cart"><a class="cart" href="./carrito.html">🛒 Cart (<span id="cartCount">0</span>)</a></div>
   </div>
-  <a href="productos.html" class="btn outline">← Volver a Servicios</a>
+</header>
+
+<main class="detalle">
+  <h1>Auditoría de Ciberseguridad</h1>
+  <img src="./imagenes/seguridad.jpg" alt="Auditoría de Ciberseguridad">
+  <p>Evaluación de vulnerabilidades (OWASP), pruebas de penetración y revisión de configuraciones. Reporte priorizado con plan de remediación.</p>
+  <p>Opcional: hardening, capacitación a equipos y acompañamiento para certificaciones (ISO 27001).</p>
+  <a class="btn" href="./productos.html">⬅ Volver a Productos</a>
 </main>
+
+<footer class="site-footer"><div class="container footer-grid"><div><strong>Agencia TI Data Diamonds</strong></div></div></footer>
+<script src="./js/cart.js"></script><script>updateCartCount();</script>
+</body></html>

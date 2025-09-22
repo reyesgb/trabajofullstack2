@@ -1,39 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detalle - Diseño UX/UI</title>
-  <link rel="stylesheet" href="css/estilos.css">
-  <script defer src="js/carrito.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diseño UX/UI — Data Diamonds</title>
+  <link rel="stylesheet" href="./css/estilos.css">
+  <style>.detalle{width:min(900px,92%);margin:36px auto}.detalle h1{font-size:clamp(2rem,4vw,3rem)}.detalle img{width:100%;border-radius:10px;margin:14px 0}.detalle p{line-height:1.7;color:#333}</style>
 </head>
 <body>
-  <header class="site-header">… (igual que antes) …</header>
+<header class="site-header">
+  <div class="container header-row">
+    <div class="brand-box"><a href="./index.html" class="brand-link"><img src="./imagenes/logo.png" class="brand-logo" alt=""><strong>Agencia Data Diamonds</strong></a></div>
+    <nav class="nav">
+      <a href="./index.html">Home</a><a class="active" href="./productos.html">Productos</a>
+      <a href="./nosotros.html">Nosotros</a><a href="./blog.html">Blog</a><a href="./contacto.html">Contacto</a>
+    </nav>
+    <div class="auth-cart"><a class="cart" href="./carrito.html">🛒 Cart (<span id="cartCount">0</span>)</a></div>
+  </div>
+</header>
 
-  <main class="container detalle-producto">
-    <h1>Diseño UX/UI</h1>
-    <div class="detalle-grid">
-      <div class="detalle-img"><img src="img/servicios/diseno-ux.jpg" alt="Diseño UX/UI"></div>
-      <div class="detalle-info">
-        <h2>Descripción</h2>
-        <p>Diseño de interfaces centradas en la experiencia del usuario, asegurando usabilidad, accesibilidad y estética atractiva.</p>
-        <h2>Incluye</h2>
-        <ul>
-          <li>Prototipos interactivos.</li>
-          <li>Pruebas de usabilidad.</li>
-          <li>Guías de estilo y componentes reutilizables.</li>
-        </ul>
-        <h2>Precio</h2>
-        <p class="precio">$180.000 CLP</p>
-        <div class="acciones">
-          <label for="cantidad">Cantidad:</label>
-          <input type="number" id="cantidad" value="1" min="1">
-          <button class="btn primary" id="add-to-cart">Agregar al carrito</button>
-        </div>
-      </div>
-    </div>
-    <a href="productos.html" class="btn outline">← Volver a Servicios</a>
-  </main>
-  <footer class="site-footer"><div class="container"><p>© 2025 Pacrima</p></div></footer>
-</body>
-</html>
+<main class="detalle">
+  <h1>Diseño UX/UI</h1>
+  <img src="./imagenes/ux.jpg" alt="Diseño UX/UI">
+  <p>Investigación de usuarios, prototipado en Figma y diseño de interfaces accesibles y consistentes. Design System y handoff para desarrollo.</p>
+  <p>Métricas de conversión y pruebas de usabilidad para iterar con evidencia.</p>
+  <a class="btn" href="./productos.html">⬅ Volver a Productos</a>
+</main>
+
+<footer class="site-footer"><div class="container footer-grid"><div><strong>Agencia TI Data Diamonds</strong></div></div></footer>
+<script src="./js/cart.js"></script><script>updateCartCount();</script>
+</body></html>
